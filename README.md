@@ -164,7 +164,7 @@ And the following additional properties:
 <img width="545" alt="selectType" src="images\SourceXSCtoXSA.png">
 </p>
   
-7. Enter the name of your Source Delivery Unit in this case, it would be `HCO_DEMOCONTENT` or Source Package Name which will be `sap.hana.democontent.epm.data:true`. 	
+6. Enter the name of your Source Delivery Unit in this case, it would be `HCO_DEMOCONTENT` or Source Package Name which will be `sap.hana.democontent.epm.data:true`. 	
 
 <p align="center">
 <img width="545" alt="DU1" src="images\DUSource.png">
@@ -175,7 +175,7 @@ And the following additional properties:
 </p>
 
 
-8. Choose the target directory. This is where the migration results will be stored.
+7. Choose the target directory. This is where the migration results will be stored.
    
    **Note:** Ensure that the directory you select is a sub-directory of `/home/user/projects`.	
 
@@ -183,13 +183,13 @@ And the following additional properties:
 <img width="545" alt="DU2" src="images\DeliveryUnit2.png">
 </p>
 
-9. Specify a unique name for the Target Folder, where the migration results will be saved. Once you've entered the name, click on Finish.
+8. Specify a unique name for the Target Folder, where the migration results will be saved. Once you've entered the name, click on Finish.
 
 <p align="center">
 <img width="545" alt="end" src="images\DeliveryUnit3.png">
 </p>
 
-10. Select the XSC Compatilibity Mode by setting it to True or False or leave it as it is to Default.
+9. Select the XSC Compatilibity Mode by setting it to True or False or leave it as it is to Default.
 
 <p align="center">
 <img width="545" alt="end" src="images\xscCompatibilityMode.png">
@@ -202,7 +202,31 @@ In the SAP HANA Application Migration Assistant, the UI provides a drop down wit
  	<li>False: Sets the value to false and adopts the native XSA behaviour</li>
   	<li>Default: Retain the existing values for all CVs</li>
 
-11. Once you see the pop-up notification at the bottom right corner of your screen, it means that the migration process is underway. This notification will keep you updated on all the steps that follow. At the end of the process, a XS Advanced project with the revised database artifacts will be created. Additionally, a `report.html` file will be generated within the project. This file contains detailed information about your project's migration.
+10. Select Migration type. By default, "Non-staged Migration" is chosen. In case if we have dependent objects outside our application like an external hdi container or schema, we need to migrate via staged migration. For further information, please refer [Staged Migration](https://help.sap.com/docs/SAP_HANA_PLATFORM/58d81eb4c9bc4899ba972c9fe7a1a115/954fd85b616b48a9b09a2f9b471eef41.html).
+
+<p align="center">
+<img width="545" alt="end" src="images\stagedMigration1.png">
+</p>
+
+11. If non-staged migration is selected, no other further steps are required. Click Finish. In case staged migration is selected, a new prompt appears to check whether we need to upload a configuration file including external dependencies or not. Choose "Yes" or "No" accordingly. By default, "No" will be selected.
+
+<p align="center">
+<img width="545" alt="end" src="images\stagedMigration1.png">
+</p>
+
+**Staged Migration** is used when there are objects in our container which have dependent objects in other hdi containers or external schemas. In the case of staged migration, separate hdbsynonyms, hdbsynonymconfigs and hdbgrants will be created for each external hdi container and external schema, the objects in our application depend upon. If all the objects required for deployment are present in our container, a **non-staged migration** would suffice.
+
+12. If you choose "Yes", the prompt to browse configuration file must be visible. Choose the valid json file from the devspace. Once the valid json file is selected, we should be able to see the preview of the configuration file. Click "Finish" button.
+
+<p align="center">
+<img width="545" alt="end" src="images\stagedMigration3.png">
+</p>
+
+<p align="center">
+<img width="545" alt="end" src="images\stagedMigration4.png">
+</p>
+
+13. Once you see the pop-up notification at the bottom right corner of your screen, it means that the migration process is underway. This notification will keep you updated on all the steps that follow. At the end of the process, a XS Advanced project with the revised database artifacts will be created. Additionally, a `report.html` file will be generated within the project. This file contains detailed information about your project's migration.
 
 <p align="center">
 <img width="545" alt="end" src="images\end.png">
