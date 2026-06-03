@@ -240,7 +240,7 @@ In the SAP HANA Application Migration Assistant, the UI provides a drop down wit
 1. [Prepare XS Classic Artifacts for Migration](https://help.sap.com/docs/SAP_HANA_PLATFORM/58d81eb4c9bc4899ba972c9fe7a1a115/a759b4815ae246649c83365cbcede79b.html).
 2. [Prepare the Source System for the XS Application Migration](https://help.sap.com/docs/SAP_HANA_PLATFORM/58d81eb4c9bc4899ba972c9fe7a1a115/2786447387df41f69a0dad1cc2973e95.html).
 3. [Migrating SAP HANA XS Javascript to Asynchronous XS Javascript in XS Advanced](https://help.sap.com/docs/SAP_HANA_PLATFORM/58d81eb4c9bc4899ba972c9fe7a1a115/9dfd58d4edd24b2c892f33987e8f42a5.html?version=2.0.07).
-4. [Connect SAP Business Application Studio to XS Advanced](https://help.sap.com/docs/SAP_HANA_PLATFORM/cf8b4c5847374960a68b55cb86eae013/d1e4372023054dc8a92dac8118ee0088.html?state=DRAFT&version=2.0.08).
+4. [Connect SAP Business Application Studio to XS Advanced](https://help.sap.com/docs/SAP_HANA_PLATFORM/cf8b4c5847374960a68b55cb86eae013/d1e4372023054dc8a92dac8118ee0088.html?version=2.0.08).
 
 ## How to obtain support
 [Create an issue](https://github.com/SAP-samples/xsc-cap-migration/issues) in this repository if you find a bug or have questions about the content.
