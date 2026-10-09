@@ -1,0 +1,8 @@
+service namespace "sap.hana.democontent.epm.services" {
+   "sap.hana.democontent.epm.data::User.Details" as "Users" 
+     create using "sap.hana.democontent.epm.Procedures::usersCreateMethod" ;
+}
+
+settings {
+    metadata cache-control "max-age= 604800";
+}

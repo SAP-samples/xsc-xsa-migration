@@ -1,0 +1,41 @@
+<sap.ui.core.mvc:View controllerName="shine.democontent.epm.poworklist.view.CurrencyConverter"
+    xmlns:sap.ui.commons="sap.ui.commons"
+    xmlns:sap.ui.commons.layout="sap.ui.commons.layout"
+    xmlns:sap.ui.core="sap.ui.core"
+    xmlns:sap.ui.table="sap.ui.table"
+    xmlns:sap.viz.ui5="sap.viz.ui5"
+    xmlns:sap.viz.ui5.data="sap.viz.ui5.data"
+    xmlns:sap.viz.ui5.types="sap.viz.ui5.types"
+    xmlns:sap.viz.ui5.types.legend="sap.viz.ui5.types.legend"
+    xmlns:sap.viz.ui5.types.controller="sap.viz.ui5.types.controller"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+	<sap.ui.commons:Panel id="panelCurrency">
+		<sap.ui.commons.layout:MatrixLayout width="auto">
+			<sap.ui.commons.layout:MatrixLayoutRow>
+				<sap.ui.commons.layout:MatrixLayoutCell>
+					<sap.ui.commons.layout:content>
+						<sap.ui.commons:Label id="currencyFactor" text="{i18n>selectcurrency}">
+						</sap.ui.commons:Label>
+					</sap.ui.commons.layout:content>
+					</sap.ui.commons.layout:MatrixLayoutCell>							
+				<sap.ui.commons.layout:MatrixLayoutCell>
+					<sap.ui.commons.layout:content>
+						<sap.ui.commons:ComboBox id="comboBoxCurrency" tooltip="{i18n>currency}" change="numericFormatterCurrency">
+							<sap.ui.commons:items>
+								<sap.ui.core:ListItem id="Country1" key="USD" text="USD" />
+								<sap.ui.core:ListItem id="Country2" key="EUR" text="EUR" />
+							</sap.ui.commons:items>
+						</sap.ui.commons:ComboBox>
+					</sap.ui.commons.layout:content>
+				</sap.ui.commons.layout:MatrixLayoutCell>	
+				<sap.ui.commons.layout:MatrixLayoutCell>
+					<sap.ui.commons.layout:content>
+						<sap.ui.commons:TextField id="TextFieldCur" tooltip="{i18n>currencyval}" data-sap-ui="TextFieldCur" readonly="readonly" style="direction:inherit;text-align:left" aria-readonly="true" editable="false" title="Currency Value">
+						</sap.ui.commons:TextField>
+
+					</sap.ui.commons.layout:content>											
+				</sap.ui.commons.layout:MatrixLayoutCell>
+			</sap.ui.commons.layout:MatrixLayoutRow>
+		</sap.ui.commons.layout:MatrixLayout>
+	</sap.ui.commons:Panel>
+</sap.ui.core.mvc:View>

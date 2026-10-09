@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Privilege:analyticPrivilege xmlns:Privilege="http://www.sap.com/ndb/BiModelPrivilege.ecore" schemaVersion="1.1" id="sap.hana.democontent.epm.spatial.models::SPATIAL" privilegeType="SQL_ANALYTIC_PRIVILEGE">
+  <descriptions defaultDescription="Collection of privileges for Spatial scenario"/>
+  <metadata changedAt="2023-09-29 10:49:03.942"/>
+  <securedModels allInformationModels="false">
+    <modelUri>sap.hana.democontent.epm.spatial.models::BP_ADDRESS_DETAILS</modelUri>
+  </securedModels>
+</Privilege:analyticPrivilege>

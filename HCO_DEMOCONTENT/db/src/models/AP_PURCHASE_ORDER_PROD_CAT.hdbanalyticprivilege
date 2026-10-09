@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Privilege:analyticPrivilege xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Privilege="http://www.sap.com/ndb/BiModelPrivilege.ecore" schemaVersion="1.1" id="sap.hana.democontent.epm.models::AP_PURCHASE_ORDER_PROD_CAT" privilegeType="SQL_ANALYTIC_PRIVILEGE">
+  <descriptions defaultDescription="AP_PURCHASE_ORDER_PROD_CAT"/>
+  <metadata changedAt="2023-09-29 10:54:15.542"/>
+  <securedModels allInformationModels="false">
+    <modelUri>sap.hana.democontent.epm.models::PO_WORKLIST</modelUri>
+  </securedModels>
+  <restriction logicalOperator="AND">
+    <filter xsi:type="Privilege:AttributeFilter" attributeName="CATEGORY">
+      <valueFilter xsi:type="AccessControl:SingleValueFilter" including="true" value="Flat-screen television"/>
+    </filter>
+    <originInformationModelUri>sap.hana.democontent.epm.models::PO_WORKLIST</originInformationModelUri>
+  </restriction>
+</Privilege:analyticPrivilege>

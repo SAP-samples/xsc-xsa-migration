@@ -1,0 +1,20 @@
+{
+    "sap.hana.democontent.epm::DUMMY": {
+    	"target": {
+       "schema": "SYS",
+       "object": "DUMMY"
+     }
+    },
+    "sap.hana.democontent.epm::M_TIME_DIMENSION": {
+    	"target": {
+       "schema": "_SYS_BI",
+       "object": "M_TIME_DIMENSION"
+     }
+    },
+    "sap.hana.democontent.epm::REPOSITORY_REST": {
+          "target": {
+              "object": "REPOSITORY_REST",
+              "schema": "SYS"
+          }
+      }
+}

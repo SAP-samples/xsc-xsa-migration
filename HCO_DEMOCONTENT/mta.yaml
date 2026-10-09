@@ -1,0 +1,58 @@
+_schema-version: 2.0
+ID: HCO_DEMOCONTENT
+description: SHINE for XSC\$|1934114
+version: 1.205.0
+
+modules:
+  - name: HCO_DEMOCONTENT-app
+    path: web
+    type: html5
+    requires:
+      - name: uaa
+      - name: xsjs
+        group: destinations
+        properties:
+          name: xsjs
+          url: ~{url}
+      - name: ui5
+        group: destinations
+        properties:
+          name: ui5
+          url: ~{url}
+
+  - name: HCO_DEMOCONTENT-db
+    type: hdb
+    path: db
+    requires:
+      - name: HCO_DEMOCONTENT-hdi
+        properties:
+            TARGET_CONTAINER: ~{service-name}
+
+  - name: HCO_DEMOCONTENT-xsjs-service
+    path: async_xsjs
+    type: nodejs
+    requires:
+      - name: HCO_DEMOCONTENT-hdi
+      - name: HCO_DEMOCONTENT-db
+      - name: jobs
+      - name: uaa
+    provides:
+      - name: xsjs
+        properties:
+           url: ${default-url}
+
+
+resources:
+  - name: HCO_DEMOCONTENT-hdi
+    type: com.sap.xs.hdi-container
+    properties:
+        service-name: ${service-name}
+  - name: ui5
+    properties:
+      url: "https://sapui5.netweaver.ondemand.com"
+  - name: uaa
+    type: com.sap.xs.uaa-space
+    parameters:
+      path: xs-security.json
+  - name: jobs
+    type: com.sap.xs.job-scheduler

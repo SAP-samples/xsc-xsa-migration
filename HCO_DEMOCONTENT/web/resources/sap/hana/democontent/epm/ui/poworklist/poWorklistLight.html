@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+       <head>
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+			  <title>Purchase Order Worklist</title>
+			  
+			  <style>
+                
+                </style>
+   			  <script src='https://sapui5.hana.ondemand.com/resources/sap-ui-core.js'
+                      id='sap-ui-bootstrap'
+                      data-sap-ui-libs='sap.ui.ux3,sap.ui.commons,sap.ui.table,sap.viz'
+                      data-sap-ui-theme='sap_platinum'
+                      data-sap-ui-xx-bindingSyntax='complex'
+				      data-sap-ui-resourceroots='{"shine.democontent.epm.poworklist" : "./"}'>
+              </script>
+              <!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
+	
+   			  <script>
+jQuery.sap.viewName = "shine.democontent.epm.poworklist.view.lightShell";
+
+sap.ui.getCore().attachInit(function() {
+    new sap.ui.core.ComponentContainer({
+        height: "100%",
+        name: "shine.democontent.epm.poworklist"
+    }).placeAt("content");
+});
+</script>
+
+       </head>
+       <body class="sapUiBody" role="application">
+              <div id="content"></div>
+       </body>
+</html>

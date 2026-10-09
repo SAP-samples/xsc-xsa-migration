@@ -1,0 +1,46 @@
+{
+    "xsappname": "HCO_DEMOCONTENT",
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.sap.hana.democontent.epm.Basic",
+            "description": "Basic usage privilege"
+        },
+        {
+            "name": "$XSAPPNAME.sap.hana.democontent.epm.Admin",
+            "description": "Administration privilege"
+        },
+        {
+            "name": "$XSAPPNAME.sap.hana.democontent.epm.ui.uis.FioriLaunchPad.WidgetAccess:FioriShineCatalog",
+            "description": "Access FioriShineCatalog Widget"
+        },
+        {
+            "name": "$XSAPPNAME.sap.hana.democontent.epm.ui.uis.FioriLaunchPad.AppSiteAccess:FioriShineLaunchPad",
+            "description": "Access FioriShineLaunchPad AppSite"
+        },
+        {
+            "name": "$XSAPPNAME.sap.hana.democontent.epm.ui.uis.FioriLaunchPad.AppSiteAccess:FioriLauncPadWithImage",
+            "description": "Access FioriLauncPadWithImage AppSite"
+        },
+        {
+            "name": "$XSAPPNAME.sap.hana.democontent.epm.ui.uis.FioriLaunchPad.AppSiteAccess:FioriShineLaunchPadWithTheme",
+            "description": "Access FioriShineLaunchPadWithTheme AppSite"
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "sap_hana_democontent_epm_roles_Admin",
+            "scope-references": [
+                "$XSAPPNAME.sap.hana.democontent.epm.Admin"
+            ]
+        },
+        {
+            "name": "sap_hana_democontent_epm_roles_User",
+            "scope-references": [
+                "$XSAPPNAME.sap.hana.democontent.epm.Basic",
+                "$XSAPPNAME.sap.hana.democontent.epm.ui.uis.FioriLaunchPad.AppSiteAccess:FioriShineLaunchPad",
+                "$XSAPPNAME.sap.hana.democontent.epm.ui.uis.FioriLaunchPad.AppSiteAccess:FioriShineLaunchPadWithTheme",
+                "$XSAPPNAME.sap.hana.democontent.epm.ui.uis.FioriLaunchPad.WidgetAccess:FioriShineCatalog"
+            ]
+        }
+    ]
+}

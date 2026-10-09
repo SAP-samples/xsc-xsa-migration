@@ -1,0 +1,8 @@
+service namespace "sap.hana.democontent.epm.etagsxsodata" {
+    "sap.hana.democontent.epm.data::User.Details"
+	as "UserDetails" concurrencytoken;
+}
+settings {  
+ support null;
+ metadata cache-control "max-age= 604800";
+ }  

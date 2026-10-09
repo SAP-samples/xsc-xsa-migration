@@ -1,0 +1,12 @@
+{
+  "role": {
+    "name": "sap.hana.democontent.epm::migration_all_analytic_priv",
+    "schema_analytic_privileges": [
+      {
+        "privileges": [
+          "sap.hana.democontent.epm::migration_all_priv"
+        ]
+      }
+    ]
+  }
+}

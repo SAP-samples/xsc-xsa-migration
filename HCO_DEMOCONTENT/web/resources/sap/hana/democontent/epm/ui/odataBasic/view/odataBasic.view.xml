@@ -1,0 +1,83 @@
+<sap.ui.core.mvc:View controllerName="shine.democontent.epm.odatabasic.view.odataBasic"
+    xmlns:sap.ui.commons.layout="sap.ui.commons.layout"
+    xmlns:sap.ui.commons="sap.ui.commons"
+    xmlns:sap.ui.table="sap.ui.table"
+    xmlns:sap.ui.core="sap.ui.core"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <sap.ui.commons.layout:MatrixLayout>
+        <sap.ui.commons.layout:rows>
+            <sap.ui.commons.layout:MatrixLayoutRow>
+                <sap.ui.commons.layout:cells>
+                    <sap.ui.commons.layout:MatrixLayoutCell>
+                        <sap.ui.commons.layout:content>
+                            <sap.ui.commons:Panel id="dispPanel" text="Business Partner Details">
+                                <sap.ui.commons:content>
+                                    <sap.ui.table:Table id="idTable" rows="{/BusinessPartners}">
+                                        <sap.ui.table:columns>
+                                            <sap.ui.table:Column width="125px" sortProperty="PARTNERID" filterProperty="PARTNERID">
+                                                <sap.ui.table:label>
+                                                    <sap.ui.commons:Label text="Partner ID" requiredAtBegin="false"></sap.ui.commons:Label>
+                                                </sap.ui.table:label>
+                                                <sap.ui.table:template>
+                                                    <sap.ui.commons:TextField value="{PARTNERID}"></sap.ui.commons:TextField>
+                                                </sap.ui.table:template>
+                                            </sap.ui.table:Column>
+                                            <sap.ui.table:Column width="125px" sortProperty="EMAILADDRESS" filterProperty="EMAILADDRESS">
+                                                <sap.ui.table:label>
+                                                    <sap.ui.commons:Label text="Email Address" requiredAtBegin="false"></sap.ui.commons:Label>
+                                                </sap.ui.table:label>
+                                                <sap.ui.table:template>
+                                                    <sap.ui.commons:TextField value="{EMAILADDRESS}"></sap.ui.commons:TextField>
+                                                </sap.ui.table:template>
+                                            </sap.ui.table:Column>
+                                            <sap.ui.table:Column width="125px">
+                                                <sap.ui.table:label>
+                                                    <sap.ui.commons:Label text="Phone Number" requiredAtBegin="false"></sap.ui.commons:Label>
+                                                </sap.ui.table:label>
+                                                <sap.ui.table:template>
+                                                    <sap.ui.commons:TextField value="{PHONENUMBER}"></sap.ui.commons:TextField>
+                                                </sap.ui.table:template>
+                                            </sap.ui.table:Column>
+                                            <sap.ui.table:Column width="125px">
+                                                <sap.ui.table:label>
+                                                    <sap.ui.commons:Label text="Fax Number" requiredAtBegin="false"></sap.ui.commons:Label>
+                                                </sap.ui.table:label>
+                                                <sap.ui.table:template>
+                                                    <sap.ui.commons:TextField value="{FAXNUMBER}"></sap.ui.commons:TextField>
+                                                </sap.ui.table:template>
+                                            </sap.ui.table:Column>
+                                            <sap.ui.table:Column width="125px" sortProperty="LEGALFORM" filterProperty="LEGALFORM">
+                                                <sap.ui.table:label>
+                                                    <sap.ui.commons:Label text="Legal Form" requiredAtBegin="false"></sap.ui.commons:Label>
+                                                </sap.ui.table:label>
+                                                <sap.ui.table:template>
+                                                    <sap.ui.commons:TextField value="{LEGALFORM}"></sap.ui.commons:TextField>
+                                                </sap.ui.table:template>
+                                            </sap.ui.table:Column>
+                                            <sap.ui.table:Column width="125px">
+                                                <sap.ui.table:label>
+                                                    <sap.ui.commons:Label text="Currency" requiredAtBegin="false"></sap.ui.commons:Label>
+                                                </sap.ui.table:label>
+                                                <sap.ui.table:template>
+                                                    <sap.ui.commons:TextField value="{CURRENCY}"></sap.ui.commons:TextField>
+                                                </sap.ui.table:template>
+                                            </sap.ui.table:Column>
+                                            <sap.ui.table:Column width="125px">
+                                                <sap.ui.table:label>
+                                                    <sap.ui.commons:Label text="Web Address" requiredAtBegin="false"></sap.ui.commons:Label>
+                                                </sap.ui.table:label>
+                                                <sap.ui.table:template>
+                                                    <sap.ui.commons:Link text="{WEBADDRESS}" href="{WEBADDRESS}" target="_blank"></sap.ui.commons:Link>
+                                                </sap.ui.table:template>
+                                            </sap.ui.table:Column>
+                                        </sap.ui.table:columns>
+                                    </sap.ui.table:Table>
+                                </sap.ui.commons:content>
+                            </sap.ui.commons:Panel>
+                        </sap.ui.commons.layout:content>
+                    </sap.ui.commons.layout:MatrixLayoutCell>
+                </sap.ui.commons.layout:cells>
+            </sap.ui.commons.layout:MatrixLayoutRow>
+        </sap.ui.commons.layout:rows>
+    </sap.ui.commons.layout:MatrixLayout>
+</sap.ui.core.mvc:View>

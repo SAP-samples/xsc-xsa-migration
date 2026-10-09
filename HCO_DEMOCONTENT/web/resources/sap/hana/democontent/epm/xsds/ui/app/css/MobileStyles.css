@@ -1,0 +1,37 @@
+.mobile-list-item {
+	padding: 0.5em;
+}
+
+.paddingAll{
+	padding:5px;
+}
+.textColor{
+	color: #007CC0;
+}
+/* provide color and bold property for Object List items */
+.sapMObjLTitle {
+    color: #007CC0 !important;
+    font-weight: bold;
+}
+.sapMObjLNumberUnit{
+    color: #007CC0 !important;
+} 
+
+.sapMObjLNumber{
+    color: #007CC0 !important;
+}
+
+.alignText{
+    line-height: 2.5;
+    font-size: 1.125rem !important;
+    color: #007CC0 !important;
+}
+
+.paddingLR {
+    margin-left: 1.5rem !important;
+}
+
+.iconPadding {
+    margin-left: 2.5rem;
+    line-height: 2 !important;
+}

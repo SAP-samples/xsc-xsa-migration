@@ -44,6 +44,8 @@ To successfully migrate the HCO_DEMOCONTENT sample delivery unit using the SAP H
 2. Setup SAP BTP Destinations to connect to both the source and target database systems.
 3. Create a SAP Business Application Studio Devspace with the SAP HANA Application Migration Assistant Extension installed.
 4. Migrate using the SAP HANA Application Migration Assistant.
+5. Database post migration changes.
+6. Deployment of the migrated application.
 
 ## Steps
 ## Step-1: Install and Configure the SAP Cloud Connector
@@ -229,9 +231,110 @@ In the SAP HANA Application Migration Assistant, the UI provides a drop down wit
 13. Once you see the pop-up notification at the bottom right corner of your screen, it means that the migration process is underway. This notification will keep you updated on all the steps that follow. At the end of the process, a XS Advanced project with the revised database artifacts will be created. Additionally, a `report.html` file will be generated within the project. This file contains detailed information about your project's migration.
 
 <p align="center">
-<img width="545" alt="end" src="images\end.png">
+<img width="545" alt="end" src="images\MigFinishedXSCtoXSA.png">
 </p>
 
+## Sample: Migrated HCO_DEMOCONTENT
+
+A fully migrated version of the HCO_DEMOCONTENT application is available in the [`HCO_DEMOCONTENT`](./HCO_DEMOCONTENT) folder of this repository. It includes the migrated database artifacts (`db`), async XSJS service layer (`async_xsjs`), web module (`web`), and the `mta.yaml` deployment descriptor — with all post-migration fixes already applied. You can use it as a reference or deploy it directly to your XSA system.
+
+## Step-5: Database Post Migration Changes
+
+Once the project is created, there are some adjustments that need to be made manually as these are not currently handled by the SAP HANA Application Migration Assistant. We have provided the changed files for [HCO_DEMOCONTENT](https://github.com/SAP-samples/xsc-xsa-migration/tree/deploymentchange) for reference.
+
+1. **Fix `.xshttpdest` file**: In `async_xsjs/lib/sap/hana/democontent/epm/services/images.xshttpdest`, the `proxyType` value must be quoted as a string. Change:
+   ```
+   proxyType = http;
+   ```
+   to:
+   ```
+   proxyType = "http";
+   ```
+   > **Reason**: The `@sap/async-xsjs` runtime evaluates `.xshttpdest` files as JavaScript. A bare unquoted `http` is treated as an undefined JavaScript identifier and causes a `ReferenceError` at startup.
+
+2. **Clean up generated files**: Delete the following files and folders that are not required for XSA deployment:
+   - `db/cfg/models/`
+   - `db/cfg/uis/`
+   - `db/cfg/synonym-grantor-service.hdbgrants`
+   - `db/cfg/synonym-grantor-service.hdbsynonymconfig`
+   - `db/src/models/synonym-grantor-service.hdbsynonym`
+   - `db/src/ui/`
+   - `db/src/uis/`
+
+3. **Update `db/src/synonym-grantor-service.hdbsynonym`**: Replace the contents with explicit targets for all required external objects:
+   ```json
+   {
+     "sap.hana.democontent.epm::DUMMY": {
+       "target": {
+         "schema": "SYS",
+         "object": "DUMMY"
+       }
+     },
+     "sap.hana.democontent.epm::M_TIME_DIMENSION": {
+       "target": {
+         "schema": "_SYS_BI",
+         "object": "M_TIME_DIMENSION"
+       }
+     },
+     "sap.hana.democontent.epm::REPOSITORY_REST": {
+       "target": {
+         "object": "REPOSITORY_REST",
+         "schema": "SYS"
+       }
+     }
+   }
+   ```
+
+4. **Update `db/src/roles/Admin.hdbrole`**: Remove the `global_roles` block (contains XSC-only roles that do not exist in XSA) and rename `REPOSITORY_REST` to its synonym name:
+   - Remove the entire `global_roles` section
+   - In `object_privileges`, rename `"name": "REPOSITORY_REST"` to `"name": "sap.hana.democontent.epm::REPOSITORY_REST"`
+
+5. **Update `db/src/roles/User.hdbrole`**: Remove the `global_roles` block, rename `M_TIME_DIMENSION` to its synonym name, and remove the unsupported object privilege:
+   - Remove the entire `global_roles` section
+   - In `object_privileges`, rename `"name": "sap.hana.democontent.epm::M_TIME_DIMENSION"` (or the bare `M_TIME_DIMENSION`) to `"name": "sap.hana.democontent.epm::M_TIME_DIMENSION"`
+   - Remove the `object_privileges` entry for `sap.hana.democontent.epm.data::SO.Item` (table privileges of this type are not supported in this context)
+
+6. **Update `db/src/models/PURCHASE_COMMON_CURRENCY.hdbcalculationview`**: Replace the `currencyConversionTables` tag to reference the HDI-namespaced CDS table names:
+   ```xml
+   <currencyConversionTables rates="sap.hana.democontent.epm.data::Conversions.TCURR" configuration="sap.hana.democontent.epm.data::Conversions.TCURV" prefactors="sap.hana.democontent.epm.data::Conversions.TCURF" notations="sap.hana.democontent.epm.data::Conversions.TCURN" precisions="sap.hana.democontent.epm.data::Conversions.TCURX"/>
+   ```
+
+7. **Update `mta.yaml`**: Remove the `synonym-grantor-service` resource entry if present, as it is no longer required after the synonym file is updated directly.
+
+## Step-6: Deployment of the Migrated Application
+
+1. Build and deploy the MTA project to your XSA system using the XS CLI or SAP Business Application Studio:
+   ```
+   mbt build
+   xs deploy <mtar-file> -f
+   ```
+
+2. Before deploying, grant the required privileges to the HDI container's object owner user (`<Schema Name>#OO`). Open an SQL console connected to your XSA HANA database with admin privileges and run the following statements. Replace `<Schema Name>` with the actual HDI container schema name (visible in the `.env` file or XSA service binding):
+
+   ```sql
+   -- _SYS_BIC schema (for calculation views / analytic privileges)
+   GRANT EXECUTE ON SCHEMA "_SYS_BIC" TO "<Schema Name>#OO" WITH GRANT OPTION;
+   GRANT SELECT ON SCHEMA "_SYS_BIC" TO "<Schema Name>#OO" WITH GRANT OPTION;
+
+   -- _SYS_BI schema (for M_TIME_DIMENSION and BI metadata)
+   GRANT SELECT ON SCHEMA "_SYS_BI" TO "<Schema Name>#OO" WITH GRANT OPTION;
+   GRANT INSERT ON "_SYS_BI"."M_TIME_DIMENSION" TO "<Schema Name>#OO" WITH GRANT OPTION;
+   GRANT SELECT ON "_SYS_BI"."M_TIME_DIMENSION" TO "<Schema Name>#OO" WITH GRANT OPTION;
+   GRANT UPDATE ON "_SYS_BI"."M_TIME_DIMENSION" TO "<Schema Name>#OO" WITH GRANT OPTION;
+
+   -- _SYS_REPO schema (referenced in User.hdbroleconfig)
+   GRANT SELECT ON SCHEMA "_SYS_REPO" TO "<Schema Name>#OO" WITH GRANT OPTION;
+
+   -- _SYS_RT schema (referenced in User.hdbroleconfig)
+   GRANT SELECT ON SCHEMA "_SYS_RT" TO "<Schema Name>#OO" WITH GRANT OPTION;
+
+   -- SYS.REPOSITORY_REST procedure (required by Admin role)
+   GRANT EXECUTE ON "SYS"."REPOSITORY_REST" TO "<Schema Name>#OO" WITH GRANT OPTION;
+   ```
+
+   > **Note**: `WITH GRANT OPTION` is required on all grants because the HDI object owner must be able to pass these privileges on to the roles it creates during deployment.
+
+3. Redeploy after applying the grants if the DB deployment was attempted before granting privileges.
 
 ## Known Issues in SAP HANA Application Migration Assistant
 - Some artifacts which are currently not supported in the SAP HANA Application Migration Assistant require manual remodeling before deployment. You can find detailed information on manually migrating these artifacts in the following [link](https://help.sap.com/docs/hana-cloud/sap-hana-cloud-migration-guide/checks-performed-by-migration-tool).

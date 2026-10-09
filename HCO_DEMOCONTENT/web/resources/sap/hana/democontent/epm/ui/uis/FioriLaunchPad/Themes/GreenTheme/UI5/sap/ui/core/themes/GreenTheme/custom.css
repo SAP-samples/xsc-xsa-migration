@@ -1,0 +1,24 @@
+/**
+* Copyright (c) 2013 SAP AG, All Rights Reserved
+*
+* Theming Engine 1.10.0
+* data:{"Path": "UI5.sap/ui/core.GreenTheme.custom", "PathPattern": "/%frameworkId%/%libId%/themes/%themeId%/%fileId%.css", "Version": { "Build":"1.29.1-SNAPSHOT.20150602135321", "Source": "1.29.1-SNAPSHOT", "Engine": "1.10.0"}}
+*/
+
+/******************* FILE /Base/baseLib/baseTheme/base.less *******************/
+/******************* FILE /Base/baseLib/sap_goldreflection/base.less *******************/
+/******************* FILE /Base/baseLib/sap_bluecrystal/base.less *******************/
+/******************* FILE /Base/baseLib/GreenTheme/custom.less *******************/
+/*<SAP_FREETEXT_LESS>*/
+/*</SAP_FREETEXT_LESS>*/
+/******************* FILE /Base/baseLib/GreenTheme/base.less *******************/
+/******************* FILE /UI5/sap/ui/core/themes/base/global.less *******************/
+/*<SAP_FREETEXT>*/
+/*</SAP_FREETEXT>*/
+/******************* FILE /UI5/sap/ui/core/themes/sap_bluecrystal/global.less *******************/
+/******************* FILE /UI5/sap/ui/core/themes/GreenTheme/custom.less *******************/
+/*<SAP_FREETEXT_LESS>*/
+/*</SAP_FREETEXT_LESS>*/
+
+
+.sapThemeMetaData-UI5-sap-ui-core{background-image: url('data:text/plain;utf-8,{"Path": "UI5.sap/ui/core.GreenTheme.custom", "PathPattern": "/%frameworkId%/%libId%/themes/%themeId%/%fileId%.css", "Version": { "Build":"1.29.1-SNAPSHOT.20150602135321", "Source": "1.29.1-SNAPSHOT", "Engine": "1.10.0"}}');}

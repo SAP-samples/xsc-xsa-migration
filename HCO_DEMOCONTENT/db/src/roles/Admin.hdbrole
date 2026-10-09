@@ -1,0 +1,85 @@
+{
+    "role": {
+        "name": "sap.hana.democontent.epm.roles::Admin",
+        "schema_roles": [
+            {
+                "names": [
+                    "sap.hana.democontent.epm.roles::User"
+                ]
+            }
+        ],
+        "object_privileges": [
+            {
+                "name": "sap.hana.democontent.epm.data::addressSeqId",
+                "type": "SEQUENCE",
+                "privileges": [
+                    "ALTER",
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::employeeSeqId",
+                "type": "SEQUENCE",
+                "privileges": [
+                    "ALTER",
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::partnerSeqId",
+                "type": "SEQUENCE",
+                "privileges": [
+                    "ALTER",
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::purchaseOrderSeqId",
+                "type": "SEQUENCE",
+                "privileges": [
+                    "ALTER",
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::salesOrderId",
+                "type": "SEQUENCE",
+                "privileges": [
+                    "ALTER",
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::sessionId",
+                "type": "SEQUENCE",
+                "privileges": [
+                    "ALTER",
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::textSeqId",
+                "type": "SEQUENCE",
+                "privileges": [
+                    "ALTER",
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::userSeqId",
+                "type": "SEQUENCE",
+                "privileges": [
+                    "ALTER",
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm::REPOSITORY_REST",
+                "type": "PROCEDURE",
+                "privileges": [
+                    "EXECUTE"
+                ]
+            }
+        ]
+    }
+}

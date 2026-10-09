@@ -1,0 +1,46 @@
+<sap.ui.core.mvc:View controllerName="shine.democontent.epm.xsjsMultiply.view.xsjsMultiply"
+    xmlns:sap.ui.commons="sap.ui.commons"
+    xmlns:sap.ui.commons.layout="sap.ui.commons.layout"
+    xmlns:sap.ui.core="sap.ui.core"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <sap.ui.commons:Panel text="XS Service Test - Multiplication">
+        <sap.ui.commons:content>
+            <sap.ui.commons.layout:MatrixLayout width="auto" columns="0">
+                <sap.ui.commons.layout:rows>
+                    <sap.ui.commons.layout:MatrixLayoutRow>
+                        <sap.ui.commons.layout:cells>
+                            <sap.ui.commons.layout:MatrixLayoutCell>
+                                <sap.ui.commons.layout:content>
+                                    <sap.ui.commons:TextField id="idInput1" tooltip="Value #1" liveChange="onLiveChange"></sap.ui.commons:TextField>
+                                </sap.ui.commons.layout:content>
+                            </sap.ui.commons.layout:MatrixLayoutCell>
+                            <sap.ui.commons.layout:MatrixLayoutCell>
+                                <sap.ui.commons.layout:content>
+                                    <sap.ui.commons:TextView id="mult" text=" * " tooltip="Multiply by"></sap.ui.commons:TextView>
+                                </sap.ui.commons.layout:content>
+                            </sap.ui.commons.layout:MatrixLayoutCell>
+                            <sap.ui.commons.layout:MatrixLayoutCell>
+                                <sap.ui.commons.layout:content>
+                                    <sap.ui.commons:TextField id="idInput2" tooltip="Value #2" liveChange="onLiveChange"></sap.ui.commons:TextField>
+                                </sap.ui.commons.layout:content>
+                            </sap.ui.commons.layout:MatrixLayoutCell>
+                            <sap.ui.commons.layout:MatrixLayoutCell>
+                                <sap.ui.commons.layout:content>
+                                    <sap.ui.commons:TextView id="equal" text=" = " tooltip="Equals"></sap.ui.commons:TextView>
+                                </sap.ui.commons.layout:content>
+                            </sap.ui.commons.layout:MatrixLayoutCell>
+                            <sap.ui.commons.layout:MatrixLayoutCell>
+                                <sap.ui.commons.layout:content>
+                                    <sap.ui.commons:TextView id="result" tooltip="Results"></sap.ui.commons:TextView>
+                                </sap.ui.commons.layout:content>
+                            </sap.ui.commons.layout:MatrixLayoutCell>
+                        </sap.ui.commons.layout:cells>
+                    </sap.ui.commons.layout:MatrixLayoutRow>
+                </sap.ui.commons.layout:rows>
+            </sap.ui.commons.layout:MatrixLayout>
+        </sap.ui.commons:content>
+        <sap.ui.commons:title>
+            <sap.ui.core:Title text="XS Service Test - Multiplication"></sap.ui.core:Title>
+        </sap.ui.commons:title>
+    </sap.ui.commons:Panel>
+</sap.ui.core.mvc:View>

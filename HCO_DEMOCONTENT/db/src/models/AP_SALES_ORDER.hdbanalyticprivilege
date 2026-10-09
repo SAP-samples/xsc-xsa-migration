@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Privilege:analyticPrivilege xmlns:Privilege="http://www.sap.com/ndb/BiModelPrivilege.ecore" schemaVersion="1.1" id="sap.hana.democontent.epm.models::AP_SALES_ORDER" privilegeType="SQL_ANALYTIC_PRIVILEGE">
+  <descriptions defaultDescription="AP_SALES_ORDER"/>
+  <metadata changedAt="2023-09-29 10:55:05.985"/>
+  <securedModels allInformationModels="false">
+    <modelUri>sap.hana.democontent.epm.models::BUYER</modelUri>
+  </securedModels>
+</Privilege:analyticPrivilege>

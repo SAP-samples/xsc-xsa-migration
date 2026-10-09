@@ -1,0 +1,207 @@
+/**
+* Copyright (c) 2013 SAP AG, All Rights Reserved
+*
+* Theming Engine 1.10.0
+* data:{"Path": "UI5.sap/ui/rta.GreenTheme.library", "PathPattern": "/%frameworkId%/%libId%/themes/%themeId%/%fileId%.css", "Version": { "Build":"1.29.1-SNAPSHOT.20150602135327", "Source": "1.29.1-SNAPSHOT", "Engine": "1.10.0"}}
+*/
+
+/******************* FILE /Base/baseLib/baseTheme/base.less *******************/
+/******************* FILE /UI5/sap/ui/core/themes/base/global.less *******************/
+/*<SAP_FREETEXT>*/
+/*</SAP_FREETEXT>*/
+/******************* FILE /UI5/sap/ui/rta/themes/base/library.less *******************/
+/*<SAP_FREETEXT>*/
+/* START "shared.less" */
+/* This CSS shares it rules with all other CSS of this library */
+/* END "shared.less" */
+/* START "ToolBar.less" */
+/******************************************************************
+Style of the RTA ToolBar
+*******************************************************************/
+/********************* FADING ******************************/
+@-webkit-keyframes FadeTopIn {
+  from {
+    top: -52x;
+  }
+  to {
+    top: 0;
+  }
+}
+@-moz-keyframes FadeTopIn {
+  from {
+    top: -952px;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes FadeTopIn {
+  from {
+    top: -52px;
+  }
+  to {
+    top: 0;
+  }
+}
+@-webkit-keyframes fadeTopOut {
+  from {
+    top: 0;
+  }
+  to {
+    top: -52px;
+  }
+}
+@-moz-keyframes fadeTopOut {
+  from {
+    top: 0;
+  }
+  to {
+    top: -52px;
+  }
+}
+@keyframes fadeTopOut {
+  from {
+    top: 0;
+  }
+  to {
+    top: -52px;
+  }
+}
+/****************** TOP & BOTTOM TOOLBAR-WRAPPER ******************/
+/* can be used to style the whole toolbar */
+/****************** TOP TOOLBAR ***************************/
+.sapUiRTAToolBarTop {
+  top: -52px;
+  width: 100%;
+  left: 50%;
+  position: absolute;
+  background: white;
+  height: 42px;
+  box-shadow: 5px 5px 10px grey;
+  transform: translate(-50%);
+}
+.sapUiRTAToolBarTopVisible {
+  visibility: visible;
+  z-index: 99999999999999999999;
+  top: -52px;
+  -webkit-animation: FadeTopIn ease-in 1;
+  -moz-animation: FadeTopIn ease-in 1;
+  animation: FadeTopIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.sapUiRTAToolBarTopInvisible {
+  top: 0;
+  -webkit-animation: fadeTopOut ease-in 1;
+  -moz-animation: fadeTopOut ease-in 1;
+  animation: fadeTopOut ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+/****************** LEFT-PART of TOOLBAR ***************************/
+.sapUiRTAToolBarLeft {
+  float: left;
+  width: 33%;
+}
+/****************** MIDDLE-PART of TOOLBAR ***************************/
+.sapUiRTAToolBarMiddle {
+  float: left;
+  width: 34%;
+  display: flex;
+  justify-content: center;
+}
+/****************** RIGHT-PART of TOOLBAR ***************************/
+.sapUiRTAToolBarRight {
+  float: right;
+  width: 33%;
+}
+/****************** LABEL in TOOLBAR-LEFT ***************************/
+.sapUiRTAToolsMenuWrapper .sapUiRTAToolBarLeft .sapUiLbl {
+  float: left;
+  margin-left: 20px;
+  font-size: 20px;
+  padding-top: 9px;
+  line-height: 22px;
+}
+/* END "ToolBar.less" */
+/* START "FieldRepository.less" */
+/******************************************************************
+Style of the RTA FieldRepository
+*******************************************************************/
+.sapUIRtaFieldRepositoryDialog .sapUiDlgCont {
+  padding: 0px !important;
+}
+.sapUIRtaFieldRepositoryDialog .sapUiDlgHdr {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.sapUIRtaFieldRepositoryDialog .sapUiTable > div.sapUiTableCnt {
+  border-left: 0px;
+  border-right: 0px;
+}
+.sapUIRtaFieldRepositoryDialog .sapUiDlgFooter {
+  height: 60px;
+}
+.sapUIRtaFieldRepositoryDialog .sapUiDlgFooter .sapMBtnInner {
+  background-color: transparent;
+  background: none;
+  border: none;
+  text-shadow: none;
+  color: white;
+}
+.sapUIRtaFieldRepositoryDialog .sapUiTableCol,
+.sapUIRtaFieldRepositoryDialog .sapUiTableTr > td {
+  border: none;
+}
+.sapUIRtaFieldRepositoryDialog .sapUiTableCol,
+.sapUIRtaFieldRepositoryDialog .sapUiTableTr > td {
+  border: none;
+}
+.sapUIRtaFieldRepositoryDialog .sapMSFF {
+  border: none;
+}
+.sapUIRtaFieldRepositoryDialog .sapMTB {
+  border: none;
+}
+.sapUIRtaFieldRepositoryDialog .resourceListIF {
+  border-right: 1px solid #cdcdcd;
+}
+.sapUIRtaFieldRepositoryDialog .sapMBtnDefault {
+  border: none;
+}
+.sapUIRtaFieldRepositoryDialog .sapMBtnCustomIcon {
+  border: none;
+  background-color: white;
+}
+.sapUIRtaFieldRepositoryDialog .sapUIRtaValueCell {
+  height: 18px;
+  width: 88%;
+}
+/*</SAP_FREETEXT>*/
+/******************* FILE /Base/baseLib/sap_bluecrystal/base.less *******************/
+/******************* FILE /UI5/sap/ui/core/themes/sap_bluecrystal/global.less *******************/
+/******************* FILE /UI5/sap/ui/rta/themes/sap_bluecrystal/library.less *******************/
+/******************* FILE /Base/baseLib/GreenTheme/custom.less *******************/
+/*<SAP_FREETEXT_LESS>*/
+/*</SAP_FREETEXT_LESS>*/
+/******************* FILE /Base/baseLib/GreenTheme/base.less *******************/
+/******************* FILE /UI5/sap/ui/core/themes/GreenTheme/global.less *******************/
+/******************* FILE /UI5/sap/ui/rta/themes/GreenTheme/library.less *******************/
+
+
+.sapThemeMetaData-UI5-sap-ui-rta{background-image: url('data:text/plain;utf-8,{"Path": "UI5.sap/ui/rta.GreenTheme.library", "PathPattern": "/%frameworkId%/%libId%/themes/%themeId%/%fileId%.css", "Version": { "Build":"1.29.1-SNAPSHOT.20150602135327", "Source": "1.29.1-SNAPSHOT", "Engine": "1.10.0"}}');}

@@ -1,0 +1,12 @@
+{
+  "name": "HCO_DEMOCONTENT-approuter",
+  "dependencies": {
+    "@sap/approuter": "^23.x"
+  },
+  "scripts": {
+    "start": "node node_modules/@sap/approuter/approuter.js"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
