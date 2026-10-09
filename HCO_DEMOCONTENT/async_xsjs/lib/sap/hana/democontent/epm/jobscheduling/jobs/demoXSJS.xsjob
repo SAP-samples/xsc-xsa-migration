@@ -1,0 +1,15 @@
+{ 
+	"description": "My first job", 
+	"action": "sap.hana.democontent.epm.jobscheduling.services:jobs.xsjs::createEntry", 
+	"schedules": [ { 
+	   "description": "Will run every 5 seconds between 1-30 seconds of every minute", 
+	   "xscron": "* * * * * * 1:30/5",
+	    "parameter": {
+             "description": "DT XSJS Job"
+             }
+	 }] 
+	   
+	   
+} 
+	   
+	   

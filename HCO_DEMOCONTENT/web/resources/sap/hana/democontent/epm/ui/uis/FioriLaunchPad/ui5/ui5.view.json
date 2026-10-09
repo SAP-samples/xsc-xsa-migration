@@ -1,0 +1,7 @@
+{"controllerName": "test.ui5", "content": [
+    {
+        "Type": "sap.ui.commons.Button",
+        "text": "My JSON View",
+        "press": "doSomething"
+    }
+]}

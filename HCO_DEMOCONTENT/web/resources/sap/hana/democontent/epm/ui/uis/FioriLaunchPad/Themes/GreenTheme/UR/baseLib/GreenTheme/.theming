@@ -1,0 +1,15 @@
+{
+	"sEntity": "Theme",
+	"sId": "GreenTheme",
+	"sLabel": "GreenTheme",
+	"sVendor": "SHINE",
+	"oExtends": "UR.baseLib.sap_bluecrystal",
+	"aBuildFiles": [
+		"standards"
+	],
+	"aFiles": [
+		"base",
+		"standards"
+	],
+	"sTextDirections": "LTR"
+}

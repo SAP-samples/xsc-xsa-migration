@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Users>
+    <User id="1">
+        <firstname>Peter</firstname>
+	<lastname>Mueller</lastname>
+	<email>peter.muller@sap.com</email>
+    </User>
+    <User id="2">
+        <firstname>Thomas</firstname>
+	<lastname>Smith</lastname>
+	<email>thomas.smith@sap.com</email>
+    </User>
+    <User id="3">
+        <firstname>John</firstname>
+	<lastname>Williams</lastname>
+	<email>john.williams@sap.com</email>
+    </User>
+    <User id="4">
+        <firstname>Maria</firstname>
+	<lastname>Jones</lastname>
+	<email>maria.jones@sap.com</email>
+    </User>
+</Users>

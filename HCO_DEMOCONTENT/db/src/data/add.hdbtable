@@ -1,0 +1,1 @@
+COLUMN TABLE "sap.hana.democontent.epm.data::add" ("Col1" VARCHAR(20) NOT NULL  COMMENT 'dummy comment', "Col2" INTEGER CS_INT NOT NULL , "Col3" NVARCHAR(20) DEFAULT 'Defaultvalue', PRIMARY KEY ("Col1")) UNLOAD PRIORITY 5  AUTO MERGE 

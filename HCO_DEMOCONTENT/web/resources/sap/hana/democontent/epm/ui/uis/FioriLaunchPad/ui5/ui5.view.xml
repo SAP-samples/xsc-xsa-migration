@@ -1,0 +1,6 @@
+<core:View xmlns:core="sap.ui.core"
+           xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
+           controllerName="test.ui5"
+           xmlns:html="http://www.w3.org/1999/xhtml">
+    <Button id="MyButton" text="Hello XML View" press="doIt"/>
+</core:View>

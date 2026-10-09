@@ -1,0 +1,5 @@
+<sap.ui.core.mvc:View controllerName="shine.democontent.epm.helloWorld.view.HelloWorld"
+    xmlns:sap.ui.commons="sap.ui.commons"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <sap.ui.commons:Button id="btn" text="{i18n>helloworld}" press="onPress"></sap.ui.commons:Button>
+</sap.ui.core.mvc:View>

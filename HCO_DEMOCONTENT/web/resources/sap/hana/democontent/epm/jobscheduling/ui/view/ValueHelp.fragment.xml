@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
+  xmlns:core="sap.ui.core">
+  <l:VerticalLayout width="100%">
+    <l:content>
+      <Text text='{i18n>XSCRONHELPTXT1}' />
+      <Text text='{i18n>XSCRONHELPTXT2}' />
+      <Text text= '{i18n>XSCRONHELPTXT3}' />
+      <Text text='{i18n>XSCRONHELPTXT4}' />
+      <Text text='{i18n>XSCRONHELPTXT5}' />
+      <Text text='{i18n>XSCRONHELPTXT6}' />
+      <Text text='{i18n>XSCRONHELPTXT7}' />
+      <Text text='{i18n>XSCRONHELPTXT8}' />
+      <Text text='{i18n>XSCRONHELPTXT9}' />
+      <Text text='{i18n>XSCRONHELPTXT10}' />
+    </l:content>
+  </l:VerticalLayout>
+</core:FragmentDefinition>

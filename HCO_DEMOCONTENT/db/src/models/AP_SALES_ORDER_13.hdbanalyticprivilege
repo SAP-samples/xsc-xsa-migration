@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Privilege:analyticPrivilege xmlns:Privilege="http://www.sap.com/ndb/BiModelPrivilege.ecore" schemaVersion="1.1" id="sap.hana.democontent.epm.models::AP_SALES_ORDER_13" privilegeType="SQL_ANALYTIC_PRIVILEGE">
+  <origin/>
+  <descriptions defaultDescription="AP_SALES_ORDER_13"/>
+  <metadata changedAt="2023-09-29 10:55:18.142" createdAt="2023-09-29 10:55:18.142"/>
+  <securedModels>
+    <modelUri>sap.hana.democontent.epm.models::SALESORDER_DYNAMIC_JOIN</modelUri>
+  </securedModels>
+</Privilege:analyticPrivilege>

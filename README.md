@@ -234,6 +234,10 @@ In the SAP HANA Application Migration Assistant, the UI provides a drop down wit
 <img width="545" alt="end" src="images\MigFinishedXSCtoXSA.png">
 </p>
 
+## Sample: Migrated HCO_DEMOCONTENT
+
+A fully migrated version of the HCO_DEMOCONTENT application is available in the [`HCO_DEMOCONTENT`](./HCO_DEMOCONTENT) folder of this repository. It includes the migrated database artifacts (`db`), async XSJS service layer (`async_xsjs`), web module (`web`), and the `mta.yaml` deployment descriptor — with all post-migration fixes already applied. You can use it as a reference or deploy it directly to your XSA system.
+
 ## Step-5: Database Post Migration Changes
 
 Once the project is created, there are some adjustments that need to be made manually as these are not currently handled by the SAP HANA Application Migration Assistant. We have provided the changed files for [HCO_DEMOCONTENT](https://github.com/SAP-samples/xsc-xsa-migration/tree/deploymentchange) for reference.

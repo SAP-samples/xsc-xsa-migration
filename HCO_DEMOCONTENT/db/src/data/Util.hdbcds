@@ -1,0 +1,126 @@
+namespace sap.hana.democontent.epm.data;
+
+using sap.hana.democontent.epm.data::EPM;
+
+
+context Util {
+
+    Entity Constants {
+        key  DOMAIN: String(30);
+        key  FIXEDVALUE: String(30);
+        key  LANGUAGE: EPM.ABAPLanguage;
+        DESCRIPTION: EPM.MString;     
+    } technical configuration {
+        column store;
+    };
+
+    Entity Texts {
+        key  TEXTID: EPM.BusinessKey;
+        LANGUAGE: EPM.ABAPLanguage;
+        ISOLANGUAGE: EPM.ISOLanguageT;
+        TEXT: EPM.VLString null;     
+    } technical configuration {
+        column store;
+
+    FULLTEXT INDEX FTI_TEXT ON ( TEXT )
+        SEARCH ONLY OFF
+        PHRASE INDEX RATIO 0.0
+        ASYNCHRONOUS
+        FAST PREPROCESS ON;
+    };
+
+    Entity Messages {
+        key  MESSAGECLASS: String(20);
+        key  MESSAGENUMBER: String(3);
+        key  LANGUAGE: EPM.ISOLanguageT;
+        DESCRIPTION: EPM.LString null;
+        TEXT: LargeString null;      
+    } technical configuration {
+        column store;
+    };
+
+    Entity SSCOOKIE {
+        key  SESSIONID: String(32);
+        key  NAME: String(30);
+        key  APPLICATION: String(128);
+        EXPIRY: UTCTimestamp;
+        DATA: LargeString;      
+    } technical configuration {
+        column store;
+    };
+
+    Entity Notes {
+        key  NOTEID: EPM.BusinessKey;
+        LINKID: EPM.BusinessKey;
+        AUTHOR: String(30);
+        TEXT: EPM.LString;
+        CREATEDAT: UTCTimestamp;
+        THUMBNAIL: EPM.LString;      
+    } technical configuration {
+        column store;
+    };   
+
+    Entity Attachments {
+        key  NOTEID: EPM.BusinessKey;
+        LINKID: EPM.BusinessKey;        
+        TYPE: String(30);
+        TITLE: EPM.LString;
+        CREATEDAT: UTCTimestamp;
+        DESCRIPTION: EPM.LString;
+        SIZE: String(40);      
+    } technical configuration {
+        column store;
+    };   
+    //for SHINE 10.3
+    temporary Entity DataGenerationTime {
+        STARTTIME: Integer64;
+        ENDTIME: Integer64;
+    } technical configuration {
+        column store;
+    }; 
+
+
+    Entity SeriesData {
+    	key setid:Integer;
+		key t: UTCTimestamp;
+		FACTOR: Decimal(9, 6);
+		series(
+		series key(setid)
+		period for series(t)  
+		equidistant increment by interval 1 hour  
+		)     
+    };  
+
+
+  define view AttachementsView as SELECT from Attachments {
+		NOTEID,
+		TYPE as "Type",
+		TITLE as "Title",
+        CREATEDAT,
+        DESCRIPTION as "Description",
+        SIZE as "Size",
+        LINKID
+   };
+
+ define view NotesView as SELECT from Notes {
+		NOTEID,
+		AUTHOR as "Author",
+		TEXT as "Text",
+        CREATEDAT,
+        THUMBNAIL as "Thumbnail",
+        LINKID
+   };   
+
+  @Search.searchable: true 
+    Define View textsView As Select From Util.Texts as B {
+
+    B.TEXTID,
+    B.LANGUAGE,
+    B.ISOLANGUAGE,
+    @Search.defaultSearchElement : true
+    B.TEXT
+
+ //SP09 requirement - Order By Clause
+ }order by B.TEXTID;
+
+};

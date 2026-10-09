@@ -1,0 +1,319 @@
+<mvc:View
+    controllerName="shine.job.scheduler.view.App"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+  	xmlns:f="sap.ui.layout.form"
+	xmlns:u="sap.ui.unified"
+	displayBlock="true"
+	xmlns="sap.m">
+	<u:Shell>
+      <u:headItems>
+        <u:ShellHeadItem
+          tooltip="{i18n>HOMETOOLTIP}"
+          icon="sap-icon://home"
+          press="handlePressHome" />
+      </u:headItems>
+      <u:content>
+        <IconTabBar
+	    class="iconTabBarPaddingTop"
+	    id="idjobSchedulingTabBar"
+	    upperCase="false"
+	    expanded="{device>/isNoPhone}">
+		    <items>
+		      <IconTabFilter
+		        text="{i18n>CONFIGUREJOBS}">
+		        <l:VerticalLayout>
+		       <Panel expandable="true" expanded="true">
+			    <headerToolbar>
+			      <Toolbar height="2rem">
+			        <ToolbarSpacer />
+			        <Button icon="sap-icon://sys-help" press="handleInfoHelp" id="selectjob"/>
+			      </Toolbar>
+			    </headerToolbar>
+			    <content>
+			    	  <Table id="idXSJobsable"
+					    inset="false"
+					    growing="false"
+					    mode="SingleSelect"
+					    selectionChange="handleSelectionChange">
+					    <headerToolbar>
+					      <Toolbar height="2rem">
+					      <Text text="{i18n>SELECT_JOB}"/>
+					      </Toolbar>
+					    </headerToolbar>					    
+					    <columns>
+					      <Column>
+					        <Text text="{i18n>JOBNAME}" />
+					      </Column>
+					      <Column
+					        minScreenWidth="Tablet"
+					        demandPopin="false">
+					        <Text text="{i18n>JOBPACKAGE}" />
+					      </Column>					      
+					    </columns>
+					    <items>
+					      <ColumnListItem>
+					        <cells>
+					          <ObjectIdentifier
+					            title="{i18n>XSJSJOBNAME}"
+					            class="sapMTableContentMargin" />
+					          <ObjectIdentifier
+					            title="{i18n>JOBSPACKAGE}"
+					            class="sapMTableContentMargin" />					            
+					        </cells>
+					      </ColumnListItem>
+					      <ColumnListItem>
+					        <cells>
+					          <ObjectIdentifier
+					            title="{i18n>SQLSCRIPTJOBNAME}"
+					            class="sapMTableContentMargin" />
+					          <ObjectIdentifier
+					            title="{i18n>JOBSPACKAGE}"
+					            class="sapMTableContentMargin" />					            
+					        </cells>
+					      </ColumnListItem>					      
+					    </items>
+					  </Table>
+			    </content>
+			   </Panel>
+		       <Panel expandable="true" expanded="true">
+			    <headerToolbar>
+			      <Toolbar height="2rem">
+			        <ToolbarSpacer />
+			        <Button icon="sap-icon://sys-help" press="handleInfoHelp" id="jobconfiguration"/>
+			      </Toolbar>
+			    </headerToolbar>
+			    <content>			      
+		    <f:SimpleForm id="idJobConfigForm"
+		      minWidth="1024"
+		      maxContainerCols="1"
+		      editable="true"
+		      layout="ResponsiveGridLayout"
+		      title="{i18n>JOB_CONFIGURATION}"
+		      labelSpanL="3"
+		      labelSpanM="3"
+		      emptySpanL="4"
+		      emptySpanM="4"
+		      columnsL="1"
+		      columnsM="1"
+		      class="editableForm">
+		      <f:content>
+		        <Label text="{i18n>USER}" />
+		        <Input id="userInput" value="" />
+		        <Label text="{i18n>PASSWORD}" />
+		        <Input id="passwordInput" type="Password" value="" />
+		        <Label text="{i18n>LOCALE}" />
+		        <Select id="localeSelect" width="100%">
+		          <items>
+		            <core:Item text="EN" />
+		          </items>
+		        </Select>
+		        <Label text="{i18n>STARTTIME}" />
+		        <DateTimeInput
+		          id="idStartTime"
+		          valueFormat="MM dd yyyy HH:mm:ss"	
+			      type="DateTime" />
+			    <Label text="{i18n>ENDTIME}" />
+		        <DateTimeInput
+		          id="idEndTime"
+		          valueFormat="MM dd yyyy HH:mm:ss"
+			      type="DateTime" />
+			    <Label text="{i18n>ACTIVE}" />
+			    <CheckBox id="idActiveCheckbox" />
+		      </f:content>
+		    </f:SimpleForm>					    
+       	<Toolbar>   
+       		<ToolbarSpacer/>  
+       		<Button type="Emphasized" id="idSaveJobConfig" text="{i18n>SAVEJOB}"
+	        	press="saveJobConfig" />  
+			<Button type="Accept" id="idActivateJob" text="{i18n>ACTIVATEJOB}"
+        		press="onOpenDialog" />	
+    		<Button type="Reject" id="idDeactivateJob" text="{i18n>DEACTIVATEJOB}"
+        		press="onOpenDialog" />
+   		</Toolbar>
+   	</content>
+   	</Panel> 				        	 						        					        
+		        </l:VerticalLayout> 
+		      </IconTabFilter>
+		      <IconTabFilter
+		        text="{i18n>SCHEDULEJOBS}">
+		      		      <l:VerticalLayout>
+		      		      	<Panel expandable="true" expanded="true">
+							    <headerToolbar>
+							      <Toolbar height="2rem">
+							        <ToolbarSpacer />
+							        <Button icon="sap-icon://sys-help" press="handleInfoHelp" id="addjobschedule"/>
+							      </Toolbar>
+							    </headerToolbar>
+							    <content>
+							  <l:Grid
+							  defaultSpan="L12 M12 S12"
+							  width="auto">
+							  	<l:content>
+							    <f:SimpleForm id="JobScheduleForm"
+							      minWidth="1024"
+							      maxContainerCols="2"
+							      editable="true"
+							      layout="ResponsiveGridLayout"
+							      title="{i18n>ADDJOBSCHEDULE}"
+							      labelSpanL="3"
+							      labelSpanM="3"
+							      emptySpanL="4"
+							      emptySpanM="4"
+							      columnsL="1"
+							      columnsM="1"
+							      class="editableForm">
+							      <f:content>
+							        <Label text="{i18n>JOBSCHEDULENAME}" />
+							        <Input id="jobNameInput" value=""  maxLength="15"/>
+							        <Label text="{i18n>JOBSCHEDULEDESC}" />
+							        <Input id="jobDescInput" value="" />
+							        <Label text="{i18n>XSCRONSCHEDULE}" />
+							        <Input id="xsCronInput" value="" placeholder="{i18n>XSCRON_HELP}"/>
+							        <Button id="xsCronHelpBtn" icon="sap-icon://sys-help" press="handleXSCronHelp" width="25%">
+							            <layoutData>
+							              <l:GridData span="L2 M2 S4" />
+							            </layoutData>
+							        </Button>    
+							        <Label text="{i18n>JOBTYPE}" />
+							        <Select id="jobTypeSelect" width="100%">
+							          <items>
+							            <core:Item text="{i18n>XSJSJOB}" />
+							            <core:Item text="{i18n>SQLSCRIPTJOB}" />
+							          </items>
+							        </Select>
+							      </f:content>
+							    </f:SimpleForm>
+							    <Button type="Emphasized" id="addScheduleButton" text="{i18n>ADDSCHEDULE}"
+							        press="addSchedule" />
+							  </l:content>
+							</l:Grid>
+							</content>
+							</Panel>
+					      	<!-- Panel for the table /RuntimeJobSchedules -->
+					        <Panel expandable="true" expanded="true" headerText="{i18n>RUNTIMEJOBSCHEDULES}">   
+					         <headerToolbar>
+							      <Toolbar height="2rem">
+							        <ToolbarSpacer />
+							        <Button icon="sap-icon://sys-help" press="handleInfoHelp" id="scheduledjobs"/>
+							      </Toolbar>
+							    </headerToolbar> 
+							    <content>
+							      <l:VerticalLayout>
+							        <Button type="Emphasized" id="refreshRuntimeJobSchedules" icon="sap-icon://refresh" press="handleRefresh" tooltip="{i18n>REFRESHJOBSCHEDULES}"/>
+							        <Table id="idRuntimeJobSchedulesTable"
+									    inset="false"
+									    growing="true"
+									    mode="Delete"
+									    delete="handleDelete"
+									    items="{
+									      path: '/RuntimeJobSchedules',
+									      sorter: {
+									        path: 'ID',
+									        descending: true
+									      }
+									    }">
+									    <headerToolbar>
+									      <Toolbar height="2rem">
+									      <Text text="{i18n>SCHEDULED_JOBS}"/>
+									      </Toolbar>
+									    </headerToolbar>	
+									    <columns>
+									      <Column>
+									        <Text text="{i18n>JOBSCHEDULENAME}" />
+									      </Column>
+									      <Column
+									        minScreenWidth="Tablet"
+									        demandPopin="true">
+									        <Text text="{i18n>JOBID}" />
+									      </Column>
+									      <Column
+									        minScreenWidth="Tablet"
+									        demandPopin="true">
+									        <Text text="{i18n>JOBTYPE}" />
+									      </Column>					      
+									    </columns>
+									    <items>
+									      <ColumnListItem>
+									        <cells>
+									          <ObjectIdentifier
+									            title="{NAME}"
+									            class="sapMTableContentMargin" />
+									          <ObjectNumber
+									            number="{ID}"/>
+									          <ObjectIdentifier
+									            title="{JOBTYPE}"
+									            class="sapMTableContentMargin" />					            
+									        </cells>
+									      </ColumnListItem>
+									    </items>
+									  </Table>
+							      </l:VerticalLayout>
+							    </content>
+				  			</Panel>
+				  			<!-- Panel for the table /JobDetails -->
+					      </l:VerticalLayout>
+		      </IconTabFilter>
+		      <IconTabFilter
+		      text="{i18n>MONITORJOBS}">
+		      				<Panel expandable="true" expanded="true" headerText="{i18n>JOBEXECUTIONDETAILS}">   
+						      	<headerToolbar>
+							      <Toolbar height="2rem">
+							        <ToolbarSpacer />
+							        <Button icon="sap-icon://sys-help" press="handleInfoHelp" id="monitorjobs"/>
+							      </Toolbar>
+							    </headerToolbar> 
+							    <content>
+							      <l:VerticalLayout>
+							      <Toolbar>    
+							        <Button type="Emphasized" id="refreshJobDetails" icon="sap-icon://refresh" press="handleRefresh" tooltip="{i18n>REFRESHJOBDETAILS}"/>
+							        <Button type="Reject" id="deleteJobDetails" icon="sap-icon://sys-cancel" press="clearJobExecutionLogs" tooltip="{i18n>CLEARJOBLOGS}"/>
+      							  </Toolbar> 
+							        <Table id="idJobDetailsTable"
+									    inset="false"
+									    growing="true"
+									    items="{
+									      path: '/JobDetails',
+									      sorter: {
+									        path: 'TIME',
+									        descending: true
+									      }
+									    }">
+									    <headerToolbar>
+									      <Toolbar height="2rem">
+									      <Text text="{i18n>MONITOR_JOB_LOGS}"/>
+									      </Toolbar>
+									    </headerToolbar>	
+									    <columns>
+									      <Column>
+									        <Text text="{i18n>JOBTIMESTAMP}" />
+									      </Column>
+									      <Column
+									        minScreenWidth="Tablet"
+									        demandPopin="true">
+									        <Text text="{i18n>JOBDATA}" />
+									      </Column>
+									    </columns>
+									    <items>
+									      <ColumnListItem>
+									        <cells>
+									          <ObjectIdentifier
+									            title="{TIME}"
+									            class="sapMTableContentMargin" />
+									          <ObjectNumber
+									            number="{SOURCE}"/>
+									        </cells>
+									      </ColumnListItem>
+									    </items>
+									  </Table>
+							      </l:VerticalLayout>
+							    </content>
+				  			</Panel>
+		      </IconTabFilter>
+		    </items>
+		</IconTabBar>
+
+	  </u:content>
+    </u:Shell>
+</mvc:View>

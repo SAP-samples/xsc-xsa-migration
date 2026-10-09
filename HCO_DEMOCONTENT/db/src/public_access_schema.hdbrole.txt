@@ -1,0 +1,13 @@
+{
+    "role": {
+        "name": "sap.hana.democontent.epm::PublicAccessSchema",
+        "schema_privileges": [
+            {
+                "privileges": [
+                    "SELECT",
+                    "EXECUTE"
+                ]
+            }
+        ]
+    }
+}

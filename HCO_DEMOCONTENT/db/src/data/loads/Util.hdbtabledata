@@ -1,0 +1,74 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "sap.hana.democontent.epm.data::Util.Constants",
+            "import_settings": {
+                "import_columns": [
+                    "DOMAIN",
+                    "FIXEDVALUE",
+                    "LANGUAGE",
+                    "DESCRIPTION"
+                ]
+            },
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "sap.hana.democontent.epm.data.loads::constants.csv",
+                "has_header": true
+            }
+        },
+        {
+            "target_table": "sap.hana.democontent.epm.data::Util.Texts",
+            "import_settings": {
+                "import_columns": [
+                    "TEXTID",
+                    "LANGUAGE",
+                    "ISOLANGUAGE",
+                    "TEXT"
+                ]
+            },
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "sap.hana.democontent.epm.data.loads::texts.csv",
+                "has_header": true
+            }
+        },
+        {
+            "target_table": "sap.hana.democontent.epm.data::Util.Notes",
+            "import_settings": {
+                "import_columns": [
+                    "NOTEID",
+                    "LINKID",
+                    "AUTHOR",
+                    "TEXT",
+                    "CREATEDAT",
+                    "THUMBNAIL"
+                ]
+            },
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "sap.hana.democontent.epm.data.loads::notes.csv",
+                "has_header": true
+            }
+        },
+        {
+            "target_table": "sap.hana.democontent.epm.data::Util.Attachments",
+            "import_settings": {
+                "import_columns": [
+                    "NOTEID",
+                    "LINKID",
+                    "TYPE",
+                    "TITLE",
+                    "CREATEDAT",
+                    "DESCRIPTION",
+                    "SIZE"
+                ]
+            },
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "sap.hana.democontent.epm.data.loads::attachments.csv",
+                "has_header": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+service namespace "sap.hana.democontent.epm"  { 
+   "sap.hana.democontent.epm.data::User.Details" as "Users"
+    create events(before "sap.hana.democontent.epm.services:userBefore.xsjslib::create_before_exit");
+}
+
+
+settings {
+    metadata cache-control "max-age= 604800";
+}
+
+   

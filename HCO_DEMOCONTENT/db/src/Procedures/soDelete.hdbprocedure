@@ -1,0 +1,37 @@
+PROCEDURE "sap.hana.democontent.epm.Procedures::soDelete"(
+	IN im_so_details "sap.hana.democontent.epm.data::SO.Header", 
+    OUT ex_error  "sap.hana.democontent.epm.data::Procedures.tt_errors" ) 
+
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER AS
+	--DEFAULT SCHEMA <default_schema_name>
+BEGIN
+
+/*This Procedure takes the Sales Order ID as the input and deletes the corresponding records from the Sales Order Header and Item tables*/
+
+declare lv_soid string;
+declare lv_salesorderid string;
+
+
+select SALESORDERID
+     into lv_soid from :im_so_details;
+
+select SALESORDERID
+     into lv_salesorderid  
+                      from "sap.hana.democontent.epm.data::SO.Header" where SALESORDERID = :lv_soid;
+
+
+if :lv_salesorderid = '' then
+
+  ex_error = select 500 as http_status_code, 
+               'Invalid SalesOrderId ' || lv_soid as error_message, 
+                     'Sales Order does not exists' as detail from "sap.hana.democontent.epm::DUMMY";
+else
+            
+delete from "sap.hana.democontent.epm.data::SO.Item"  where "SALESORDERID" = :lv_soid;     
+
+delete from  "sap.hana.democontent.epm.data::SO.Header" where SALESORDERID = :lv_soid;
+            
+ end if;
+ 
+END;

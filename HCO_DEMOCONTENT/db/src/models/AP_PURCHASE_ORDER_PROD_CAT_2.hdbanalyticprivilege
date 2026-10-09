@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Privilege:analyticPrivilege xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Privilege="http://www.sap.com/ndb/BiModelPrivilege.ecore" schemaVersion="1.1" id="sap.hana.democontent.epm.models::AP_PURCHASE_ORDER_PROD_CAT_2" privilegeType="SQL_ANALYTIC_PRIVILEGE">
+  <origin/>
+  <descriptions defaultDescription="AP_PURCHASE_ORDER_PROD_CAT_2"/>
+  <metadata changedAt="2023-09-29 10:54:14.883" createdAt="2023-09-29 10:54:14.882"/>
+  <securedModels>
+    <modelUri>sap.hana.democontent.epm.models::PURCHASE_ORDER_WORKLIST</modelUri>
+  </securedModels>
+  <restriction logicalOperator="AND">
+    <filter xsi:type="Privilege:AttributeFilter" attributeName="PRODUCTDESC"/>
+    <attributeName>PRODUCTDESC</attributeName>
+    <originInformationModelUri>sap.hana.democontent.epm.models::PURCHASE_ORDER_WORKLIST</originInformationModelUri>
+  </restriction>
+</Privilege:analyticPrivilege>

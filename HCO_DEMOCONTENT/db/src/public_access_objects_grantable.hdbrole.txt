@@ -1,0 +1,1269 @@
+{
+    "role": {
+        "name": "sap.hana.democontent.epm::PublicAccessObjects#",
+        "object_privileges": [
+            {
+                "name": "sap.hana.democontent.epm.models::BUYER",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::CUSTOMER_DISCOUNT_BY_RANKING_AND_REGION",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::PO_BASIC",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::PO_HEADER",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::PO_ITEM",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::PO_WORKLIST",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::PROD",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::PRODUCT",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::PRODUCT_SALE_PRICE",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::PURCHASE_COMMON_CURRENCY",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::PURCHASE_ORDER_WORKLIST",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::PURCHASE_OVERVIEW",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALESORDER_BASKET_ANALYSIS",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALESORDER_DYNAMIC_JOIN",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALESORDER_RANKING",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALESORDER_RANKING_SQL",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALES_DETAILS",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALES_ORDER_DYNAMIC_TIME_PERIOD",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALES_ORDER_HEADER_W_BUYER",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALES_ORDER_LITE",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALES_ORDER_RANKING",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALES_ORDER_RANKING_AND_DISCOUNT_SQL",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALES_ORDER_WORKLIST",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALES_OVERVIEW_WO_CURR_CONV",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALES_OVERVIEW_WO_CURR_CONV_OPT",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SALES_YEAR_COMPARISON",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::SUPPLIER",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::TIME_DIM",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.spatial.models::BP_ADDRESS_DETAILS",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.spatial.models::PRODUCT_SALES",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.spatial.models::REGION_PRODUCT",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.spatial.models::REGION_SALES_BP",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::add",
+                "type": "TABLE",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::userSeqId",
+                "type": "SEQUENCE",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::textSeqId",
+                "type": "SEQUENCE",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::sessionId",
+                "type": "SEQUENCE",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::seriesData",
+                "type": "SEQUENCE",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::salesOrderId",
+                "type": "SEQUENCE",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::purchaseOrderSeqId",
+                "type": "SEQUENCE",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::TABLE_FUNCTION_SALESORDER_RANKING_SQL",
+                "type": "FUNCTION",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_product_sales_price",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_bp_addresses_by_role",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_application_variables",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.seriesdata::generate_exchange_rate_history",
+                "type": "FUNCTION",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.jobscheduling.procedures::jobsCreateEntry",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.functions::get_employees_by_name_filter",
+                "type": "FUNCTION",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.functions::apply_discount",
+                "type": "FUNCTION",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::usersCreateMethod",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::soDelete",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::seriesData",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::poCreate",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_session_variables",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::partnerSeqId",
+                "type": "SEQUENCE",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::employeeSeqId",
+                "type": "SEQUENCE",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::addressSeqId",
+                "type": "SEQUENCE",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::TABLE_FUNCTION_SALES_ORDER_RANKING_AND_DISCOUNT_SQL",
+                "type": "FUNCTION",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_session_variable",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_products_by_filter",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_application_variable",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::TABLE_FUNCTION_PRODUCT_SALE_PRICE",
+                "type": "FUNCTION",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::soCreate",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::set_session_variable",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::set_application_variable",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::jobsCreateEntry",
+                "type": "PROCEDURE",
+                "privileges_with_grant_option": [
+                    "EXECUTE"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions.TCURX",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions.TCURW",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions.TCURV",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions.TCURT",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions.TCURR",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions.TCURN",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions.TCURF",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions.TCURC",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions.T006A",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions.T006",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions.MandtT",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Conversions",
+                "type": "Context",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.MString",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.LString",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.ISOLanguageT",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.CurrencyT",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.BusinessKey",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.AmountT",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.ABAPLanguage",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.ABAPDate",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM",
+                "type": "Context",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.MapKeys",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.MyAnnotation1",
+                "type": "Annotation",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.PhoneT",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.QuantityT",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.SDate",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.SString",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.Source",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.StatusT",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.UnitT",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.VLString",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::EPM.ValidityT",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::JobsDemo.RuntimeSchedules",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::JobsDemo.Details",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::JobsDemo",
+                "type": "Context",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.texts",
+                "type": "View",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.productTexts",
+                "type": "View",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.productLog",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.SupplierView",
+                "type": "View",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.SexT",
+                "type": "ScalarType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.Products",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.ProductView",
+                "type": "View",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.NameT",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.HistT",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.Employees",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.BuyerView",
+                "type": "View",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.BusinessPartner",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD.Addresses",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::MD",
+                "type": "Context",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::PO.ItemView",
+                "type": "View",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::PO.POWorklistView",
+                "type": "View",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::PO.Item",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::PO.HeaderView",
+                "type": "View",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::PO.Header",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::PO",
+                "type": "Context",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Procedures",
+                "type": "Context",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Procedures.tt_bp_addresses",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Procedures.tt_bp_addresses_ext",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Procedures.tt_customer_discount_calculation",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Procedures.tt_errors",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Procedures.tt_product_detail",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Procedures.tt_product_ids",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Procedures.tt_product_sale_price",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Procedures.tt_variable",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Procedures.tt_tax_calculation",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Procedures.tt_scookie",
+                "type": "StructuredType",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::SO.Item",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::SO.Header",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::SO.Filter",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::SO",
+                "type": "Context",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::User.Details",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::User",
+                "type": "Context",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util.textsView",
+                "type": "View",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util.Texts",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util.SeriesData",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util.SSCOOKIE",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util.NotesView",
+                "type": "View",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util.Notes",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util.Messages",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util.DataGenerationTime",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util.Constants",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util.Attachments",
+                "type": "Entity",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util.AttachementsView",
+                "type": "View",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::Util",
+                "type": "Context",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.spatial.models::SPATIAL_2",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.spatial.models::SPATIAL_3",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.spatial.models::SPATIAL_1",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.spatial.models::SPATIAL",
+                "type": "VIEW",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_application_variable",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_application_variables",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_bp_addresses_by_role",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_product_sales_price",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_products_by_filter",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_session_variable",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::get_session_variables",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::jobsCreateEntry",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::poCreate",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::seriesData",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::set_application_variable",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::set_session_variable",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::soCreate",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::soDelete",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.Procedures::usersCreateMethod",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::addressSeqId",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::employeeSeqId",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::partnerSeqId",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::purchaseOrderSeqId",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::salesOrderId",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::seriesData",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::sessionId",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::textSeqId",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.data::userSeqId",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.functions::apply_discount",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.functions::get_employees_by_name_filter",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.functions::sales_order_ranking_and_discount",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.functions::tax_calculation",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.jobscheduling.procedures::jobsCreateEntry",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::TABLE_FUNCTION_PRODUCT_SALE_PRICE",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::TABLE_FUNCTION_SALESORDER_RANKING_SQL",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.models::TABLE_FUNCTION_SALES_ORDER_RANKING_AND_DISCOUNT_SQL",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "sap.hana.democontent.epm.seriesdata::generate_exchange_rate_history",
+                "privileges_with_grant_option": [
+                    "SELECT"
+                ]
+            }
+        ]
+    }
+}

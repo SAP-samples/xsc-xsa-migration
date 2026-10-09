@@ -1,0 +1,8 @@
+service namespace "sap.hana.democontent.epm"  { 
+   "sap.hana.democontent.epm.models::PURCHASE_ORDER_WORKLIST" as "PO_WORKLIST" 
+   keys ("PURCHASEORDERID","PURCHASEORDERITEM");
+}
+
+settings {
+    metadata cache-control "max-age= 604800";
+}

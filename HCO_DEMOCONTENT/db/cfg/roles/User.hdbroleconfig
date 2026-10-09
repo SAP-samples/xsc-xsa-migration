@@ -1,0 +1,16 @@
+{
+    "sap.hana.democontent.epm.roles::User": {
+        "_SYS_BI": {
+            "schema": "_SYS_BI"
+        },
+        "_SYS_BIC": {
+            "schema": "_SYS_BIC"
+        },
+        "_SYS_REPO": {
+            "schema": "_SYS_REPO"
+        },
+        "_SYS_RT": {
+            "schema": "_SYS_RT"
+        }
+    }
+}

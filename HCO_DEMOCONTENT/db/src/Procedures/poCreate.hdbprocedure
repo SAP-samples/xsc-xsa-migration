@@ -1,0 +1,38 @@
+PROCEDURE "sap.hana.democontent.epm.Procedures::poCreate" (
+	IN im_row "sap.hana.democontent.epm.data::PO.Header", 
+	OUT ex_error "sap.hana.democontent.epm.data::Procedures.tt_errors") 
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER AS
+BEGIN
+/***************************** 
+	Write your procedure logic 
+ *****************************/
+  
+declare lv_partner_id string;
+
+
+select "PARTNER.PARTNERID" 
+     into lv_partner_id
+                      from :im_row;
+
+if :lv_partner_id = ' ' then
+  ex_error = select 500 as http_status_code, 
+               'invalid partner id ' || lv_partner_id as error_message, 
+                     'No Way! Partner Id field can not be empty' as detail from "sap.hana.democontent.epm::DUMMY";
+else
+                     
+  INSERT INTO "sap.hana.democontent.epm.data::PO.Header" 
+    VALUES("sap.hana.democontent.epm.data::purchaseOrderSeqId".NEXTVAL,
+    '0000000033',
+    now(),
+    '0000000033',
+    now(),
+    null,
+    :lv_partner_id,
+    'EUR',
+	        (SELECT ROUND(TO_DECIMAL(1 + (999999-1)*RAND()),2) FROM "sap.hana.democontent.epm::DUMMY"),
+	        (SELECT ROUND(TO_DECIMAL(1 + (999999-1)*RAND()),2) FROM "sap.hana.democontent.epm::DUMMY"),
+	        (SELECT ROUND(TO_DECIMAL(1 + (9999-1)*RAND()),2) FROM "sap.hana.democontent.epm::DUMMY"),
+	        'N','I','I','I','I');                     
+end if;
+END;

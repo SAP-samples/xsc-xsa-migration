@@ -1,0 +1,25 @@
+<sap.ui.core.mvc:View controllerName="shine.democontent.epm.odatabasic.view.odataBasic"
+    xmlns:sap.ui.commons.layout="sap.ui.commons.layout"
+    xmlns:sap.ui.commons="sap.ui.commons"
+    xmlns:sap.ui.table="sap.ui.table"
+    xmlns:sap.ui.core="sap.ui.core"
+    xmlns:sap.ui.core.mvc="sap.ui.core.mvc" >
+    <sap.ui.commons.layout:MatrixLayout>
+        <sap.ui.commons.layout:rows>
+            <sap.ui.commons.layout:MatrixLayoutRow>
+                <sap.ui.commons.layout:cells>
+                    <sap.ui.commons.layout:MatrixLayoutCell>
+                        <sap.ui.commons.layout:content>
+                            <sap.ui.commons:Panel id="dispPanel" text="Business Partner Details">
+                                <sap.ui.commons:content>
+                                    <sap.ui.table:Table id="idTable">
+                                    </sap.ui.table:Table>
+                                </sap.ui.commons:content>
+                            </sap.ui.commons:Panel>
+                        </sap.ui.commons.layout:content>
+                    </sap.ui.commons.layout:MatrixLayoutCell>
+                </sap.ui.commons.layout:cells>
+            </sap.ui.commons.layout:MatrixLayoutRow>
+        </sap.ui.commons.layout:rows>
+    </sap.ui.commons.layout:MatrixLayout>
+</sap.ui.core.mvc:View>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="sap.hana.democontent.epm.models::PURCHASE_OVERVIEW" applyPrivilegeType="SQL_ANALYTIC_PRIVILEGE" defaultClient="$$client$$" defaultLanguage="$$language$$" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED">
+  <origin/>
+  <descriptions defaultDescription="PURCHASE_OVERVIEW"/>
+  <metadata changedAt="2023-09-29 10:54:06.508"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="sap.hana.democontent.epm.data::PO.Header">
+      <resourceUri>sap.hana.democontent.epm.data::PO.Header</resourceUri>
+    </DataSource>
+    <DataSource id="sap.hana.democontent.epm.data::PO.Item">
+      <resourceUri>sap.hana.democontent.epm.data::PO.Item</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="inner">
+      <viewAttributes>
+        <viewAttribute id="PURCHASEORDERID"/>
+        <viewAttribute id="HISTORY_CREATEDAT"/>
+        <viewAttribute id="LIFECYCLESTATUS"/>
+        <viewAttribute id="PURCHASEORDERITEM"/>
+        <viewAttribute id="PRODUCTID"/>
+        <viewAttribute id="CURRENCY"/>
+        <viewAttribute id="NETAMOUNT"/>
+        <viewAttribute id="TAXAMOUNT"/>
+        <viewAttribute id="QUANTITY"/>
+        <viewAttribute id="QUANTITYUNIT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#sap.hana.democontent.epm.data::PO.Header">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PURCHASEORDERID" source="PURCHASEORDERID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HISTORY_CREATEDAT" source="HISTORY.CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFECYCLESTATUS" source="LIFECYCLESTATUS"/>
+      </input>
+      <input node="#sap.hana.democontent.epm.data::PO.Item">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PURCHASEORDERITEM" source="PURCHASEORDERITEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTID" source="PRODUCT.PRODUCTID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETAMOUNT" source="NETAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TAXAMOUNT" source="TAXAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="QUANTITY" source="QUANTITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="QUANTITYUNIT" source="QUANTITYUNIT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PURCHASEORDERID" source="PURCHASEORDERID"/>
+      </input>
+      <joinAttribute name="PURCHASEORDERID"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_1">
+    <attributes>
+      <attribute id="PURCHASEORDERID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PURCHASEORDERID"/>
+        <keyMapping columnObjectName="Join_1" columnName="PURCHASEORDERID"/>
+      </attribute>
+      <attribute id="HISTORY_CREATEDAT" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HISTORY_CREATEDAT"/>
+        <keyMapping columnObjectName="Join_1" columnName="HISTORY_CREATEDAT"/>
+      </attribute>
+      <attribute id="LIFECYCLESTATUS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFECYCLESTATUS"/>
+        <keyMapping columnObjectName="Join_1" columnName="LIFECYCLESTATUS"/>
+      </attribute>
+      <attribute id="PURCHASEORDERITEM" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PURCHASEORDERITEM"/>
+        <keyMapping columnObjectName="Join_1" columnName="PURCHASEORDERITEM"/>
+      </attribute>
+      <attribute id="CURRENCY" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENCY"/>
+        <keyMapping columnObjectName="Join_1" columnName="CURRENCY"/>
+      </attribute>
+      <attribute id="QUANTITYUNIT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QUANTITYUNIT"/>
+        <keyMapping columnObjectName="Join_1" columnName="QUANTITYUNIT"/>
+      </attribute>
+      <attribute id="PRODUCTID$local">
+        <descriptions defaultDescription="PRODUCT_PRODUCTID"/>
+        <keyMapping columnObjectName="Join_1" columnName="PRODUCTID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="NETAMOUNT" order="6" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="NETAMOUNT"/>
+        <measureMapping columnObjectName="Join_1" columnName="NETAMOUNT"/>
+      </measure>
+      <measure id="TAXAMOUNT" order="7" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="TAXAMOUNT"/>
+        <measureMapping columnObjectName="Join_1" columnName="TAXAMOUNT"/>
+      </measure>
+      <measure id="QUANTITY" order="8" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="QUANTITY"/>
+        <measureMapping columnObjectName="Join_1" columnName="QUANTITY"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+    <sharedDimensions>
+      <logicalJoin associatedObjectUri="sap.hana.democontent.epm.models::PROD">
+        <attributes>
+          <attributeRef>#PRODUCTID$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>PRODUCTID</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="referential"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+    </sharedDimensions>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize/>
+      </shape>
+      <shape modelObjectName="Join_1" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
+        <upperLeftCorner x="273" y="60"/>
+      </shape>
+      <shape modelObjectName="sap.hana.democontent.epm.models::PROD" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="637" y="30"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="40" y="270"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

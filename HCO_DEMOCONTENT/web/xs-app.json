@@ -1,0 +1,28 @@
+{
+    "welcomeFile": "index.html",
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": ".*\\.xsjs.*",
+            "destination": "xsjs"
+        },
+        {
+            "source": ".*\\.xsodata.*",
+            "destination": "xsjs"
+        },
+        {
+            "source": "^/sap/hana/democontent/epm/(.*)$",
+            "localDir": "resources",
+            "scope": [
+                "$XSAPPNAME.sap.hana.democontent.epm.Basic"
+            ]
+        },
+        {
+            "source": "^/sap/hana/democontent/epm/admin/(.*)$",
+            "localDir": "resources",
+            "scope": [
+                "$XSAPPNAME.sap.hana.democontent.epm.Admin"
+            ]
+        }
+    ]
+}

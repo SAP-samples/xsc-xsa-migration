@@ -1,0 +1,8 @@
+{
+	"sEntity": "Theme",
+	"sId": "GreenTheme",
+	"sLabel": "GreenTheme",
+	"sVendor": "SHINE",
+	"oExtends": "UI5.sap/collaboration.sap_bluecrystal",
+	"sTextDirections": "LTR"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "HCO_DEMOCONTENT-xsjs-service",
+  "description": "",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node --experimental-vm-modules main.js",
+    "stop": ""
+  },
+  "files": [],
+  "dependencies": {
+    "@sap/xsenv": "^6.2.2",
+    "@sap/async-xsjs": "^3.0.6",
+    "@sap/cds": "^10.1.1"
+  },
+  "engines": {
+      "node": "22.x"
+  }
+}

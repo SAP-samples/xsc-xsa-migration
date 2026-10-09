@@ -1,0 +1,11 @@
+service namespace "sap.hana.democontent.epm"{
+
+	"sap.hana.democontent.epm.data::JobsDemo.Details" as "JobDetails";
+	
+	"sap.hana.democontent.epm.data::JobsDemo.RuntimeSchedules" as "RuntimeJobSchedules";
+	
+}
+
+settings {
+    metadata cache-control "max-age= 604800";
+}

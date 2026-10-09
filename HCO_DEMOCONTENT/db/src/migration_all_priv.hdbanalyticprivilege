@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Privilege:analyticPrivilege xmlns:Privilege="http://www.sap.com/ndb/BiModelPrivilege.ecore" schemaVersion="1.1" id="sap.hana.democontent.epm::migration_all_priv" privilegeType="SQL_ANALYTIC_PRIVILEGE">
+  <origin/>
+  <descriptions defaultDescription="All privilege to access migrated views"/>
+  <securedModels>
+    <modelUri>sap.hana.democontent.epm.models::BUYER</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::PO_WORKLIST</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::PROD</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::PRODUCT</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::PRODUCT_SALE_PRICE</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::PURCHASE_COMMON_CURRENCY</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::PURCHASE_ORDER_WORKLIST</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::PURCHASE_OVERVIEW</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALESORDER_BASKET_ANALYSIS</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALESORDER_DYNAMIC_JOIN</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALESORDER_RANKING</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALESORDER_RANKING_SQL</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALES_DETAILS</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALES_ORDER_DYNAMIC_TIME_PERIOD</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALES_ORDER_LITE</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALES_ORDER_RANKING</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALES_ORDER_RANKING_AND_DISCOUNT_SQL</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALES_ORDER_WORKLIST</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALES_OVERVIEW_WO_CURR_CONV</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALES_OVERVIEW_WO_CURR_CONV_OPT</modelUri>
+    <modelUri>sap.hana.democontent.epm.models::SALES_YEAR_COMPARISON</modelUri>
+    <modelUri>sap.hana.democontent.epm.spatial.models::BP_ADDRESS_DETAILS</modelUri>
+    <modelUri>sap.hana.democontent.epm.spatial.models::PRODUCT_SALES</modelUri>
+    <modelUri>sap.hana.democontent.epm.spatial.models::REGION_PRODUCT</modelUri>
+    <modelUri>sap.hana.democontent.epm.spatial.models::REGION_SALES_BP</modelUri>
+  </securedModels>
+  <whereSql></whereSql>
+</Privilege:analyticPrivilege>
